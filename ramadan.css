@@ -1,0 +1,103 @@
+*{
+    font-family:  monospace;
+}
+  html{
+      font-size: 62.5%;
+  }
+  .item-a {height: 10rem;
+    display: grid;
+    grid-area: header;
+    background: #86bee4;
+    grid-template-columns:2fr 3fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .item-a .menu{
+  
+    justify-self: right;
+  }
+  .item-a .menu a{
+      padding: 1rem;
+      margin: 1rem;
+      text-decoration: none;
+  }
+  .item-a .logo p{
+    font-size:6.3rem;
+    font-weight: 600;
+   margin:  0rem;
+   border: .8rem solid;
+  }
+  .item-b img{
+      width: 100%;
+  }
+  .item-b{
+    grid-area: main;
+    background: #f7eddd;
+  }
+  .item-c  {background: #f7eddd;
+    grid-area: sidebar;
+  font-size: 2rem;
+    color: #e7759b;
+  }
+  .containe {
+    font-size: 2.3rem;
+   border: 0.5rem groove #3de61b;
+   text-align: center;
+    display: grid;
+    grid-template-columns: 2fr 4fr 3fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header"
+      " sidebar sidebar main main" 
+      " footer footer footer footer"
+    
+  }
+  .btn{ margin: auto;
+    cursor:pointer;
+    margin-top: 10px;
+    justify-content: center;
+    background-color: transparent;
+    padding: 6px 6px;
+    border: 2px groove rgb(61, 230, 27);
+}
+.item-c h1{
+    
+    font-size: 4rem;
+}
+.item-c p{
+padding:0 7rem ;
+    font-size: 2rem;
+}
+.item-c a i{
+    padding:0 0 3rem 0;
+   font-size: 2rem;
+}
+.btn:active , .btn:focus{
+    border: 2px solid #52f531;
+    padding: 6px 14px;
+    outline:none;
+  
+}
+  @media only screen and (max-width:1000px){
+      html{
+
+          font-size: 70%;
+      }
+      .item-c p{
+        padding:0  ;
+            font-size: 1.8rem;
+        }
+        .containe {
+            grid-template-areas: 
+              "header header header header"
+              " main main main main" 
+              " sidebar sidebar sidebar sidebar"
+          }
+       .item-c h1{font-size: 8rem;
+            margin-top: -3rem;
+        }
+        .item-c a i{
+            padding:0 6px 3rem 6px;
+           font-size: 3rem;
+        }
+  }
