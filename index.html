@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="" content="">
-   <meta name="viewport" content="600px, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Ramadan Kareem !!!</title>
- <link rel="shortcut icon" href="EidMubarak.png" type="image/x-icon">
+  <link rel="shortcut icon" href="EidMubarak.png" type="image/x-icon">
   <link rel="stylesheet" href="ramadan.css">
   <style type="text/css" media="all">
 
@@ -14,38 +13,45 @@
 
 <body>
   <section class="containe">
-    <div class="item-a">
-      <div class="logo">
-        <p>Ramadan </p>
-
-      </div>
-      <div class="menu">
-        <a class="" href="#">💒Home</a>
-        <a class="" href="#">✨About</a>
-        <a class="" href="#">👷Hire me</a>
-        <a class="" href="#">☎️Contact</a>
-      </div>
+    <div class="logo">
+      <p>Ramadan </p>
     </div>
+    <div class="menu">
+      <a class="" href="#">💒Home</a>
+      <a class="" href="#">✨About</a>
+      <a class="" href="#">👷Hire me</a>
+      <a class="" href="#">☎️Contact</a>
+    </div>
+    <div id="ptogg" style=" width: 30px;cursor: pointer; height: 20px;margin: 0 2px;">
+      <div class="tr" id="togg">
+      </div>
+  </div>
+ 
     <div class="item-b"><img src="EidMubarak.png" alt=""></div>
     <div class="item-c">
       <h1>
         <u>Happy Ramadan</u>
       </h1>
       <p>
-        🌲🌲🌲🌲🌲<br>That time of the year has come. A month to repent from our wrong-doings and sin. May all of us find peace on this Ramadan. Happy Ramzan Kareem!
+        🌲🌲🌲🌲🌲<br>That time of the year has come. A month to repent from our wrong-doings and sin. May all of us
+        find peace on this Ramadan. Happy Ramzan Kareem!
 
-        May Allah ease your hardships and shower you with loads of peace and prosperity during this holy month of Ramadan. Have a blessed time.
-        
-        Ramadan Kareem! May Allah give you all the prosperity and success. May Allah bless you with wealth and happiness and gives you a healthy life.
-        
+        May Allah ease your hardships and shower you with loads of peace and prosperity during this holy month of
+        Ramadan. Have a blessed time.
+
+        Ramadan Kareem! May Allah give you all the prosperity and success. May Allah bless you with wealth and happiness
+        and gives you a healthy life.
+
         Ramadan Mubarak. May this Ramadan clear your understanding and Judgement between right and wrong.
-        
+
         Wish you have a blissful Ramadan 2021. May the Rahmat of Almighty Allah shine upon you and your family always!
-        
-        Welcome the month of Ramadan with a heart filled with peace, harmony and joy. May the divine blessings of Allah protect and guide you.
+
+        Welcome the month of Ramadan with a heart filled with peace, harmony and joy. May the divine blessings of Allah
+        protect and guide you.
       </p>
-      <a class="btn" style="color: #222; text-decoration: none;" href="https://maishtiyaque.github.io/Link/">Know More➯</a>
-      <p  style="color: #222;">Md Ishtiyaque Ahmad, 1906146 <br>
+      <a class="btn" style="color: #222; text-decoration: none;" href="https://maishtiyaque.github.io/Link/">Know
+        More➯</a>
+      <p style="color: #222;">Md Ishtiyaque Ahmad, 1906146 <br>
         Copyrights © 2021 - All rights reserved</p>
       <a style="color:#3b5998;" href="https://www.facebook.com/mdishtiyaque.ahmad.581/"><i
           class="fab fa fa-facebook"></i></a>
@@ -55,6 +61,23 @@
       <a style="color:#dd2a7b;" href="https://www.instagram.com/maishtiyaque/"><i class="fab  fa-instagram"></i></a>
     </div>
   </section>
+  <script>
+ var togg= document.getElementById("togg");
+ var ptogg= document.getElementById("ptogg");
+ var menu=document.getElementsByClassName("menu")[0];
+ ptogg.onclick=function(){
+  if(togg.classList[0]=="tr"){
+    togg.classList.add("rt");
+     togg.classList.remove("tr");
+     menu.style.height="auto";
+   }
+   else{
+    togg.classList.add("tr");
+    togg.classList.remove("rt");
+    menu.style.height=0;
+   }
+ }
+  </script>
   <script src="https://kit.fontawesome.com/1839f51cfd.js" crossorigin="anonymous"></script>
 </body>
 
