@@ -1,36 +1,39 @@
 *{
-    font-family:  monospace;
+    font-family: 'Nunito', monospace;
 }
   html{
       font-size: 62.5%;
   }
-  .item-a {height: 10rem;
-    display: grid;
-    grid-area: header;
-    background: #86bee4;
-    grid-template-columns:2fr 3fr;
-
-    justify-items: center;
-    align-items: center;
-  }
-  .item-a .menu{
+ .menu{
+   grid-area: menu;
     justify-self: right;
+    align-self: center;
+    margin-right: 2%;
   }
-  .item-a .menu a{
-      padding: 1rem;
-      margin: 1rem;
+  .menu a{
+      margin: 1em;
+      color: aliceblue;
       text-decoration: none;
   }
-  .item-a .logo p{
-    font-size:6.3rem;
+  .menu a:hover{
+    text-decoration:underline solid 2px;
+  }
+  .logo{justify-self: center;
+    align-self: center;
+    grid-area: logo;
+    margin:3px auto;
+    border:.8rem solid;
+  }
+ .logo p{
+    font-size:5rem;
     font-weight: 600;
-   margin:  0rem;
+   margin:  .5rem;
+   padding: 0rem;
    border: .8rem solid;
   }
   .item-b img{
       width: 100%;
-      align-self: center;
-     
+      align-self: center; 
   }
   .item-b{
     display: grid;
@@ -39,25 +42,23 @@
   }
   .item-c  {background: #f7eddd;
     grid-area: sidebar;
-  font-size: 2rem;
     color: #e7759b;
   }
-  .containe {
-    font-size: 2.3rem;
+  .containe { background-color: #574b90;
+    font-size: 1.7rem;
+    color: aliceblue;
    border: 0.5rem groove #3de61b;
    text-align: center;
     display: grid;
-    grid-template-columns: 2fr 4fr 3fr 2fr;
-    grid-template-rows: auto;
+    grid-template-columns: 4fr 2fr 3fr 2fr;
+    grid-template-rows:  auto;
     grid-template-areas: 
-      "header header header header"
+      "logo menu menu menu"
       " sidebar sidebar main main" 
       " footer footer footer footer"
-    
   }
   .btn{ margin: auto;
     cursor:pointer;
-    font-size: 2rem;
     margin-top: 10px;
     justify-content: center;
     background-color: transparent;
@@ -65,12 +66,10 @@
     border: 2px groove rgb(61, 230, 27);
 }
 .item-c h1{
-    
     font-size: 4.5rem;
 }
 .item-c p{
 padding:0 6rem;
-    font-size: 2rem;
 }
 
 .item-c a i{
@@ -83,37 +82,74 @@ padding:0 6rem;
     outline:none;
   
 }
+
 @media only screen and (max-width:854px){
   html{
-      font-size: 56%;
+
+      font-size: 57%;
   }
+
 }
 @media only screen and (max-width:764px){
   html{
-      font-size: 56%;
+      font-size: 55%;
   }
- .menu{
-    visibility: hidden;
-  }
+.containe{
+  grid-template-areas: 
+  "logo logo rt kt"
+  "menu menu menu menu"
+   "main main main main" 
+   "sidebar sidebar sidebar sidebar"
+  " footer footer footer footer"
+}
+.menu{
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 0;
+ margin: 0;
+justify-self: center;
+background-color: #9e579d;
+font-size: 2rem;
+}
+#ptogg{ grid-area: rt;
+  justify-self: right;
+  align-self: center;
+}
+.tr{
+  background-color: #faf5f5;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0% 0%,0 10%,50% 10%,/*FIRST SEC*/
+  50% 45%,0 45%,0 55%,50% 55%,/*MIDDLE SEC*/
+  50% 90%,0 90%,0 100%,100% 100%,100% 90%,50% 90%,/*BOTTOM SEC*/
+  50% 55%,100% 55%,100% 45%,50% 45%,/*MIDDLE SEC*/
+  50% 10% ,100% 10%,100% 0%);/*FIRST SEC*/
+  
+}
+.rt{
+  background-color: #f5f5f5;
+  width: 20px;
+  height: 20px;
+  clip-path: polygon(0% 0%,0 15%,40% 50%,
+  0% 85%,0% 100%,50% 55%,
+  100% 100%,100% 85%,60% 50%,
+  100% 15%,100% 0%,50% 45%);
+  margin: 0 4px;
+}
+
 }
   @media only screen and (max-width:586px){
       html{
           font-size: 48%;
       }
-        .containe {
-            grid-template-areas: 
-              "header header header header"
-              " main main main main" 
-              " sidebar sidebar sidebar sidebar"
-          }
-.item-a{
-grid-template-columns: repeat(auto-fit,minmax(44rem,1fr));
-}
-.item-a .logo{
-margin:3px 4%;
-justify-self:left;
-}
- .menu{
-            visibility: hidden;
-          } 
+      .containe{
+        grid-template-areas: 
+        "logo logo kt rt"
+        "menu menu menu menu"
+        "main main main main" 
+        "sidebar sidebar sidebar sidebar"
+        " footer footer footer footer"
+      }
+      #ptogg{justify-self: center;}
   }
